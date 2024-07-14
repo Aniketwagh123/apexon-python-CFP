@@ -1,6 +1,5 @@
 import random
 
-
 def check_attendance():
     return random.choice([True, False])
 
