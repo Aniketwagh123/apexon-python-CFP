@@ -25,7 +25,7 @@ class EmployeeWage:
 
     def add_wage(self, employee_type):
         hours_worked = self.FULL_DAY_HOUR if employee_type == 'full_time' else self.PART_TIME_HOUR
-        if employee_type != 'absent' and self.total_hours + hours_worked <= self.MAX_HOURS_IN_MONTH and self.total_days + 1 <= self.MAX_DAYS_IN_MONTH:
+        if  self.total_hours + hours_worked <= self.MAX_HOURS_IN_MONTH and self.total_days + 1 <= self.MAX_DAYS_IN_MONTH:
             self.total_hours += hours_worked
             self.total_wage += self.get_wage(employee_type)
             self.total_days += 1
